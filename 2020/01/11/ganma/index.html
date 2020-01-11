@@ -32,7 +32,8 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="超级浣熊" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -460,7 +461,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="应用界面"><a href="#应用界面" class="headerlink" title="应用界面"></a>应用界面</h2><img src=http://chuantu.xyz/t6/711/1578644737x3661913030.jpg style="zoom:33%;" />
+                <h2 id="应用界面"><a href="#应用界面" class="headerlink" title="应用界面"></a>应用界面</h2><img src="http://chuantu.xyz/t6/711/1578644737x3661913030.jpg" style="zoom:33%;">
 
 <p>输入框内输入内容,点击添加生成内容</p>
 <p>点击完成清除内容</p>
@@ -468,15 +469,15 @@
 <h2 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h2><p><a href="https://pan.baidu.com/s/1g-oOxnlQFNCwSfaJqFn7Og" target="_blank" rel="noopener">https://pan.baidu.com/s/1g-oOxnlQFNCwSfaJqFn7Og</a> 提取码:2t8l</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>html</p>
 <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
+&lt;html lang="en"&gt;
 
 
 &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
     &lt;title&gt;干嘛&lt;/title&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/ganma.css&quot;&gt;
+    &lt;link rel="stylesheet" href="./css/ganma.css"&gt;
 &lt;/head&gt;
 
 `&lt;body&gt;`
@@ -485,9 +486,9 @@
         今天干嘛
     &lt;/header&gt;
     &lt;main&gt;
-        &lt;div class=&quot;shuru&quot;&gt;
-            &lt;input type=&quot;text&quot; id=&quot;shuru&quot;&gt;
-            &lt;button id=&quot;shurubtn&quot;&gt;添加&lt;/button&gt;
+        &lt;div class="shuru"&gt;
+            &lt;input type="text" id="shuru"&gt;
+            &lt;button id="shurubtn"&gt;添加&lt;/button&gt;
         &lt;/div&gt;
         &lt;ul&gt;
 
@@ -500,8 +501,8 @@
 
     `&lt;/footer&gt;`
 
-    &lt;script src=&quot;./js/jquery.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;./js/ganma.js&quot;&gt;&lt;/script&gt;
+    &lt;script src="./js/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./js/ganma.js"&gt;&lt;/script&gt;
 
 `&lt;/body&gt;`
 
@@ -581,9 +582,9 @@ button:hover {
 <pre><code>let arr = [];
 
 
-$(&#39;#shurubtn&#39;).on(&#39;click&#39;, function () {
-    arr.push($(&#39;#shuru&#39;).val())
-    localStorage.setItem(&#39;key&#39;, arr);
+$('#shurubtn').on('click', function () {
+    arr.push($('#shuru').val())
+    localStorage.setItem('key', arr);
     setHtml();
 });
 
@@ -592,38 +593,56 @@ setHtml();
 
 
 function setHtml() {
-    let i = localStorage.getItem(&#39;key&#39;);
-    arr = i.split(&#39;,&#39;);
+    let i = localStorage.getItem('key');
+    arr = i.split(',');
     let str = ``;
     arr.forEach((item, key) =&gt; {
         str += `&lt;li&gt;
-            &lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;&quot; value=&quot;${item}&quot; /&gt;
-            &lt;button index=&quot;${key}&quot;&gt;完成&lt;/button&gt;
+            &lt;input type="text" name="" id="" value="${item}" /&gt;
+            &lt;button index="${key}"&gt;完成&lt;/button&gt;
         &lt;/li&gt;`
     });
     console.log(str)
-    $(&#39;main ul&#39;).html(str);
+    $('main ul').html(str);
     Delete()
 }
 
 
 function Delete() {
-    $(&#39;ul button&#39;).on(&#39;click&#39;, function () {
+    $('ul button').on('click', function () {
         window.location.reload();
-        let index = this.getAttribute(&#39;index&#39;);
+        let index = this.getAttribute('index');
         arr.splice(index, 1);
-        if (arr != &#39;&#39;) {
-            localStorage.setItem(&#39;key&#39;, arr);
+        if (arr != '') {
+            localStorage.setItem('key', arr);
             console.log(123)
         } else {
-            localStorage.removeItem(&quot;key&quot;)
+            localStorage.removeItem("key")
         }
         setHtml()
 
     })
 };
 </code></pre><p>jQuery自己下一个就行</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 

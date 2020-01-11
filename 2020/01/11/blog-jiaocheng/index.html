@@ -29,7 +29,8 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="超级浣熊" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -475,11 +476,11 @@
 <p>这样本地的网站配置也弄好啦，输入<code>hexo g &amp;&amp; hexo s</code>打开本地服务器，然后浏览器打开<a href="http://localhost:4000/，就可以看到我们的博客啦" target="_blank" rel="noopener">http://localhost:4000/，就可以看到我们的博客啦</a></p>
 <p>按<code>ctrl+c</code>关闭本地服务器。</p>
 <h2 id="连接Github与本地"><a href="#连接Github与本地" class="headerlink" title="连接Github与本地"></a>连接Github与本地</h2><p>首先右键打开git bash，然后输入下面命令：</p>
-<p><code>git config --global user.name &quot;你的用户名&quot;git config</code></p>
-<p><code>global user.email &quot;你注册时用的邮箱&quot;</code></p>
+<p><code>git config --global user.name "你的用户名"git config</code></p>
+<p><code>global user.email "你注册时用的邮箱"</code></p>
 <p>用户名和邮箱根据你注册github的信息自行修改。</p>
 <p>然后生成密钥SSH key：</p>
-<p><code>ssh-keygen -t rsa -C &quot;你注册时用的邮箱&quot;</code></p>
+<p><code>ssh-keygen -t rsa -C "你注册时用的邮箱"</code></p>
 <p><strong>问enter file in which….时输入 ./ssh (不要忘了最前面的点)</strong></p>
 <p>打开<a href="https://github.com/" target="_blank" rel="noopener">github</a>，在头像下面点击<code>settings</code>，再点击<code>SSH and GPG keys</code>，新建一个SSH，名字随便。</p>
 <p>打开文件夹下的ssh.pub文件，复制到key里即可</p>
@@ -489,7 +490,7 @@
 <p><code>deploy:  type: git  repository: https://github.com/gaowanliang/gaowanliang.github.io  branch: master</code></p>
 <p>repository修改为你自己的github项目地址。</p>
 <h2 id="写文章、发布文章"><a href="#写文章、发布文章" class="headerlink" title="写文章、发布文章"></a>写文章、发布文章</h2><p>首先在博客根目录下右键打开git bash，安装一个扩展<code>npm i hexo-deployer-git</code>。</p>
-<p>然后输入<code>hexo new post &quot;文章标题&quot;</code>，新建一篇文章。</p>
+<p>然后输入<code>hexo new post "文章标题"</code>，新建一篇文章。</p>
 <p>然后打开<code>D:\study\program\blog\source\_posts</code>的目录，可以发现下面多了一个文件夹和一个<code>.md</code>文件，一个用来存放你的图片等数据，另一个就是你的文章文件啦。</p>
 <p>编写完markdown文件后，根目录下输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>可以本地预览效果，最后输入<code>hexo d</code>上传到github上。这时打开你的github.io主页就能看到发布的文章啦。</p>
 <h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>现在默认的域名还是<code>xxx.github.io</code>，是不是很没有牌面？想不想也像我一样弄一个专属域名呢，首先你得购买一个域名，xx云都能买，看你个人喜好了。</p>
@@ -498,12 +499,30 @@
 <p>这时候你的项目根目录应该会出现一个名为<code>CNAME</code>的文件了。如果没有的话，打开你本地博客<code>/source</code>目录，我的是<code>D:\study\program\blog\source</code>，新建<code>CNAME</code>文件，注意没有后缀。然后在里面写上你的域名，保存。最后运行<code>hexo g</code>、<code>hexo d</code>上传到github。</p>
 <h2 id="备份博客源文件"><a href="#备份博客源文件" class="headerlink" title="备份博客源文件"></a>备份博客源文件</h2><p>有时候我们想换一台电脑继续写博客，这时候就可以将博客目录下的所有源文件都上传到github上面。</p>
 <p>首先在github博客仓库下新建一个分支<code>hexo</code>，然后<code>git clone</code>到本地，把<code>.git</code>文件夹拿出来，放在博客根目录下。</p>
-<p>然后<code>git checkout hexo</code>切换到<code>hexo</code>分支，然后<code>git add .</code>，然后<code>git commit -m &quot;xxx&quot;</code>，最后<code>git push origin hexo</code>提交就行了。</p>
+<p>然后<code>git checkout hexo</code>切换到<code>hexo</code>分支，然后<code>git add .</code>，然后<code>git commit -m "xxx"</code>，最后<code>git push origin hexo</code>提交就行了。</p>
 <h2 id="下载我弄好的主题包"><a href="#下载我弄好的主题包" class="headerlink" title="下载我弄好的主题包"></a>下载我弄好的主题包</h2><p>大家也可以先用上文hexo安装方法安装完hexo，然后直接<a href="https://cdn.jsdelivr.net/gh/gaowanliang/gitment-store/hexo-theme-matery.zip" target="_blank" rel="noopener">下载这个文件</a>，放到theme文件夹里，这是我修改完的基本没bug的定制化的博客，且用了<a href="http://www.gwl6.me/2019/09/30/jia-su-github-pages-wang-zhan/" target="_blank" rel="noopener">这篇博客</a>里说的加速方式，就不用你自己搞了，就可以直接拿来用啦。</p>
 <h2 id="其他定制选项"><a href="#其他定制选项" class="headerlink" title="其他定制选项"></a>其他定制选项</h2><p>可以看主题包作者写的<a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">这个</a></p>
 <h2 id="本文作者"><a href="#本文作者" class="headerlink" title="本文作者:"></a>本文作者:</h2><p>Gaowan Liang</p>
 <p>原链接 : <a href="https://gwliang.com/2019/10/05/blog-jiao-cheng/" target="_blank" rel="noopener">https://gwliang.com/2019/10/05/blog-jiao-cheng/</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 

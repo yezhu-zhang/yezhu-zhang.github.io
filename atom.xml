@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yezhu-zhang.github.io/"/>
-  <updated>2020-08-06T02:29:28.974Z</updated>
+  <updated>2020-08-06T07:09:29.297Z</updated>
   <id>http://yezhu-zhang.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>react</title>
+    <link href="http://yezhu-zhang.github.io/2020/08/06/react/"/>
+    <id>http://yezhu-zhang.github.io/2020/08/06/react/</id>
+    <published>2020-08-06T06:27:11.000Z</published>
+    <updated>2020-08-06T07:09:29.297Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-react&quot;&gt;&lt;a href=&quot;#1-react&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>webpack</title>

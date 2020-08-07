@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yezhu-zhang.github.io/"/>
-  <updated>2020-08-06T07:09:29.297Z</updated>
+  <updated>2020-08-07T09:15:20.167Z</updated>
   <id>http://yezhu-zhang.github.io/</id>
   
   <author>
@@ -17,9 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>react-2</title>
+    <link href="http://yezhu-zhang.github.io/2020/08/07/react-2/"/>
+    <id>http://yezhu-zhang.github.io/2020/08/07/react-2/</id>
+    <published>2020-08-07T08:37:15.000Z</published>
+    <updated>2020-08-07T09:15:20.167Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-react的表单输入&quot;&gt;&lt;a href=&quot;#1-react的表单输入&quot; class=&quot;headerlink&quot; title=&quot;1 react的表单输入&quot;&gt;&lt;/a&gt;1 react的表单输入&lt;/h1&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>react</title>
-    <link href="http://yezhu-zhang.github.io/2020/08/06/react/"/>
-    <id>http://yezhu-zhang.github.io/2020/08/06/react/</id>
+    <link href="http://yezhu-zhang.github.io/2020/08/06/react-1/"/>
+    <id>http://yezhu-zhang.github.io/2020/08/06/react-1/</id>
     <published>2020-08-06T06:27:11.000Z</published>
     <updated>2020-08-06T07:09:29.297Z</updated>
     
@@ -116,7 +139,7 @@
     <link href="http://yezhu-zhang.github.io/2020/01/11/blog-jiaocheng/"/>
     <id>http://yezhu-zhang.github.io/2020/01/11/blog-jiaocheng/</id>
     <published>2020-01-11T06:58:54.000Z</published>
-    <updated>2020-01-11T06:59:42.880Z</updated>
+    <updated>2020-08-07T09:19:51.718Z</updated>
     
     <summary type="html">
     

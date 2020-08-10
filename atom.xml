@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yezhu-zhang.github.io/"/>
-  <updated>2020-08-07T09:15:20.167Z</updated>
+  <updated>2020-08-10T02:24:44.999Z</updated>
   <id>http://yezhu-zhang.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>react-3</title>
+    <link href="http://yezhu-zhang.github.io/2020/08/07/react-3/"/>
+    <id>http://yezhu-zhang.github.io/2020/08/07/react-3/</id>
+    <published>2020-08-07T09:26:08.000Z</published>
+    <updated>2020-08-10T02:24:44.999Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-react常用手脚架&quot;&gt;&lt;a href=&quot;#1-react常用手脚架&quot; class=&quot;headerlink&quot; title=&quot;1 react常用手脚架&quot;&gt;&lt;/a&gt;1 react常用手脚架&lt;/h1&gt;&lt;p&gt;用react手脚架搭建项目&lt;/p&gt;
+&lt;pre
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>react-2</title>
@@ -40,11 +64,11 @@
   </entry>
   
   <entry>
-    <title>react</title>
+    <title>react-1</title>
     <link href="http://yezhu-zhang.github.io/2020/08/06/react-1/"/>
     <id>http://yezhu-zhang.github.io/2020/08/06/react-1/</id>
     <published>2020-08-06T06:27:11.000Z</published>
-    <updated>2020-08-06T07:09:29.297Z</updated>
+    <updated>2020-08-10T00:38:14.081Z</updated>
     
     <summary type="html">
     

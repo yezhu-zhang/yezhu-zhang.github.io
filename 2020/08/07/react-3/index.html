@@ -32,8 +32,8 @@ npx create-react-">
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="超级藏剑" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="超级藏剑" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -481,8 +481,8 @@ eject：<span class="token string">'react-scripts eject'</span></code></pre>
 <pre class=" language-js"><code class="language-js">cnpm run eject</code></pre>
 <h2 id="2-2-改造项目"><a href="#2-2-改造项目" class="headerlink" title="2.2 改造项目"></a>2.2 改造项目</h2><p>将src目录下的App.js里return内容改为</p><div>hello react</div><br>src下的index.js<br>react的严格模式:如果即将废弃的写法出现,严格模式报警告信息<p></p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> serviceWorker <span class="token keyword">from</span> <span class="token string">'./serviceWorker'</span><span class="token punctuation">;</span>
-  <span class="token operator">&lt;</span>React<span class="token punctuation">.</span>StrictMode<span class="token operator">&gt;</span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>React<span class="token punctuation">.</span>StrictMode<span class="token operator">&gt;</span></code></pre>
+  <span class="token operator">&lt;</span>React<span class="token punctuation">.</span>StrictMode<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>React<span class="token punctuation">.</span>StrictMode<span class="token operator">></span></code></pre>
 <p>如果想要项目运行加载更快,将unregister改为register</p>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// If you want your app to work offline and load faster, you can change</span>
 <span class="token comment" spellcheck="true">// unregister() to register() below. Note this comes with some pitfalls.</span>
@@ -496,12 +496,12 @@ serviceWorker<span class="token punctuation">.</span><span class="token function
 
 <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
-    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>组件嵌套<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>父组件<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>hr <span class="token operator">/</span><span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>Child <span class="token operator">/</span><span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>h1<span class="token operator">></span>组件嵌套<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">></span>父组件<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">></span>
+        <span class="token operator">&lt;</span>hr <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Child <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -515,20 +515,20 @@ serviceWorker<span class="token punctuation">.</span><span class="token function
         count <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count <span class="token punctuation">}</span> 
         flag<span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token boolean">true</span> <span class="token punctuation">}</span> 
         test <span class="token operator">=</span> <span class="token string">"true"</span>
-        <span class="token operator">/</span><span class="token operator">&gt;</span></code></pre>
+        <span class="token operator">/</span><span class="token operator">></span></code></pre>
 <p>子组件</p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
 <span class="token keyword">import</span> PropTypes <span class="token keyword">from</span> <span class="token string">'prop-types'</span>
 <span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>h5<span class="token operator">&gt;</span>子组件<span class="token operator">&lt;</span><span class="token operator">/</span>h5<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>count <span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>flag <span class="token operator">?</span> <span class="token string">'111'</span> <span class="token punctuation">:</span> <span class="token string">'222'</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>test <span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>h5<span class="token operator">></span>子组件<span class="token operator">&lt;</span><span class="token operator">/</span>h5<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>count <span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>flag <span class="token operator">?</span> <span class="token string">'111'</span> <span class="token punctuation">:</span> <span class="token string">'222'</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>test <span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
 
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -550,28 +550,28 @@ Child<span class="token punctuation">.</span>propTypes <span class="token operat
   count <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count <span class="token punctuation">}</span>  
   flag<span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token boolean">true</span> <span class="token punctuation">}</span> 
   test <span class="token operator">=</span> <span class="token string">"true"</span>
-  onClick <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>getData<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">&gt;</span>
-<span class="token operator">/</span><span class="token operator">&gt;</span></code></pre>
+  onClick <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>getData<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">/</span><span class="token operator">></span></code></pre>
 <p>子组件</p>
 <pre><code> &lt;button onClick = { () =&gt; {this.props.onClick('abcdefg')}}&gt;传递数据&lt;/button&gt;</code></pre><p><a href="https://reactjs.bootcss.com/docs/context.html" target="_blank" rel="noopener">Context 传值</a><br>Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。<br>Context 提供了一种在组件之间共享此类值的方式，而不必显式地通过组件树的逐层传递 props。<br>Context 设计目的是为了共享那些对于一个组件树而言是“全局”的数据<br>逐层传递</p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
 <span class="token keyword">class</span> <span class="token class-name">Third</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token number">333</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
-        <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>count <span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">3</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token number">333</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+        <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>count <span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">3</span> <span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">class</span> <span class="token class-name">Second</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token number">222</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>Third count<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>count<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">2</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token number">222</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Third count<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>count<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">2</span> <span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -579,10 +579,10 @@ Child<span class="token punctuation">.</span>propTypes <span class="token operat
 <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span> Context 传值 <span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>Second count<span class="token operator">=</span><span class="token string">"100"</span><span class="token operator">/</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">1</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">></span> Context 传值 <span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Second count<span class="token operator">=</span><span class="token string">"100"</span><span class="token operator">/</span><span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">1</span> <span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -590,28 +590,28 @@ Child<span class="token punctuation">.</span>propTypes <span class="token operat
 <span class="token keyword">export</span> <span class="token keyword">default</span> App</code></pre>
 <p>Context传值</p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
-<span class="token keyword">const</span> CountContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token string">'8888'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第一步<span class="token punctuation">,</span>创建Context对象<span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token keyword">const</span> CountContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token string">'8888'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第一步<span class="token punctuation">,</span>创建Context对象<span class="token operator">--</span><span class="token operator">></span>
 <span class="token keyword">class</span> <span class="token class-name">Third</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   <span class="token comment" spellcheck="true">// 指定 contextType 读取当前的 theme context。</span>
   <span class="token comment" spellcheck="true">// React 会往上找到最近的 theme Provider，然后使用它的值。</span>
   <span class="token comment" spellcheck="true">// 在这个例子中，当前的 theme 值为 “dark”。</span>
-  <span class="token keyword">static</span> contextType <span class="token operator">=</span> CountContext <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第三步<span class="token punctuation">,</span>必须这么写 <span class="token operator">--</span><span class="token operator">&gt;</span>
+  <span class="token keyword">static</span> contextType <span class="token operator">=</span> CountContext <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第三步<span class="token punctuation">,</span>必须这么写 <span class="token operator">--</span><span class="token operator">></span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token number">333</span> <span class="token operator">--</span><span class="token operator">-</span> <span class="token number">5555</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>context <span class="token punctuation">}</span><span class="token operator">&gt;</span>context传值<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第四<span class="token punctuation">,</span>通过<span class="token keyword">this</span><span class="token punctuation">.</span>context拿到顶级组件的值 <span class="token operator">--</span><span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token number">333</span> <span class="token operator">--</span><span class="token operator">-</span> <span class="token number">5555</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>context <span class="token punctuation">}</span><span class="token operator">></span>context传值<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第四<span class="token punctuation">,</span>通过<span class="token keyword">this</span><span class="token punctuation">.</span>context拿到顶级组件的值 <span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">class</span> <span class="token class-name">Second</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token number">222</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>Third<span class="token operator">/</span><span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token number">222</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Third<span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -619,12 +619,12 @@ Child<span class="token punctuation">.</span>propTypes <span class="token operat
 <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span> Context 传值 <span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>CountContext<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token string">"active"</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第二步<span class="token punctuation">,</span>Context对象<span class="token punctuation">.</span>Provider 必须通过value属性传值 <span class="token operator">--</span><span class="token operator">&gt;</span>
-          <span class="token operator">&lt;</span>Second <span class="token operator">/</span><span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>CountContext<span class="token punctuation">.</span>Provider<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">></span> Context 传值 <span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">></span>
+        <span class="token operator">&lt;</span>CountContext<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token string">"active"</span><span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 第二步<span class="token punctuation">,</span>Context对象<span class="token punctuation">.</span>Provider 必须通过value属性传值 <span class="token operator">--</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>Second <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>CountContext<span class="token punctuation">.</span>Provider<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -632,32 +632,32 @@ Child<span class="token punctuation">.</span>propTypes <span class="token operat
 <span class="token keyword">export</span> <span class="token keyword">default</span> App</code></pre>
 <p>Context 传值 + Consumer</p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
-<span class="token keyword">const</span> CountContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token string">'8888'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">1</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token keyword">const</span> CountContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token string">'8888'</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">1</span> <span class="token operator">--</span><span class="token operator">></span>
 <span class="token keyword">class</span> <span class="token class-name">Third</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token number">333</span> <span class="token operator">--</span><span class="token operator">-</span> <span class="token number">5555</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span> 
-        <span class="token operator">&lt;</span>CountContext<span class="token punctuation">.</span>Consumer<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">3</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token number">333</span> <span class="token operator">--</span><span class="token operator">-</span> <span class="token number">5555</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span> 
+        <span class="token operator">&lt;</span>CountContext<span class="token punctuation">.</span>Consumer<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">3</span> <span class="token operator">--</span><span class="token operator">></span>
           <span class="token punctuation">{</span>
-            <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
               <span class="token keyword">return</span> <span class="token punctuation">(</span>
-                <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span> value <span class="token punctuation">}</span><span class="token operator">&gt;</span>aaaa<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span> value <span class="token punctuation">}</span><span class="token operator">></span>aaaa<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
               <span class="token punctuation">)</span>
             <span class="token punctuation">}</span>
           <span class="token punctuation">}</span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>CountContext<span class="token punctuation">.</span>Consumer<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>CountContext<span class="token punctuation">.</span>Consumer<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">class</span> <span class="token class-name">Second</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token number">222</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>Third<span class="token operator">/</span><span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token number">222</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Third<span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -665,12 +665,12 @@ Child<span class="token punctuation">.</span>propTypes <span class="token operat
 <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span> Context 传值 <span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>CountContext<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token string">"active"</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">2</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
-          <span class="token operator">&lt;</span>Second <span class="token operator">/</span><span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>CountContext<span class="token punctuation">.</span>Provider<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">></span> Context 传值 <span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">></span>
+        <span class="token operator">&lt;</span>CountContext<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token string">"active"</span><span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">2</span> <span class="token operator">--</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>Second <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>CountContext<span class="token punctuation">.</span>Provider<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -684,10 +684,10 @@ Child<span class="token punctuation">.</span>propTypes <span class="token operat
 <span class="token keyword">class</span> <span class="token class-name">Second</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
         <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>children <span class="token punctuation">}</span>
-        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token number">222</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token number">222</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -695,12 +695,12 @@ Child<span class="token punctuation">.</span>propTypes <span class="token operat
 <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
   render <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>包含<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>Second<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">></span>包含<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Second<span class="token operator">></span>
           Lorem Ipsum is simply dummy text <span class="token keyword">of</span> the printing and typesetting industry<span class="token punctuation">.</span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>Second<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Second<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>

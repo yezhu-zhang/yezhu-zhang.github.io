@@ -4,14 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript实现记事本应用&#34;干嘛&#34;, 超级藏剑">
-    <meta name="description" content="应用界面
-
-输入框内输入内容,点击添加生成内容
-点击完成清除内容
-数据存储在本地LocalStorage
-下载链接https://pan.baidu.com/s/1g-oOxnlQFNCwSfaJqFn7Og 提取码:2t8l
-代码html">
+    <meta name="keywords" content="react实现后台管理系统-1, 超级藏剑">
+    <meta name="description" content="1. 脚手架创建项目npx create-react-app myapp
+2. react UI库ant Design
+ant-design-pro镜像地址：
+http://ant-design-pro.gitee.io/index-cn
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>JavaScript实现记事本应用&#34;干嘛&#34; | 超级藏剑</title>
+    <title>react实现后台管理系统-1 | 超级藏剑</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/叶苎3.gif')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/叶苎1.gif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript实现记事本应用&#34;干嘛&#34;</h1>
+                    <h1 class="description center-align post-title">react实现后台管理系统-1</h1>
                 </div>
             </div>
         </div>
@@ -422,7 +420,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-11
+                    2020-08-10
                 </div>
                 
 
@@ -433,7 +431,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 				
@@ -449,170 +447,96 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="应用界面"><a href="#应用界面" class="headerlink" title="应用界面"></a>应用界面</h2><img src="http://chuantu.xyz/t6/711/1578644737x3661913030.jpg" style="zoom:33%;">
-
-<p>输入框内输入内容,点击添加生成内容</p>
-<p>点击完成清除内容</p>
-<p>数据存储在本地LocalStorage</p>
-<h2 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h2><p><a href="https://pan.baidu.com/s/1g-oOxnlQFNCwSfaJqFn7Og" target="_blank" rel="noopener">https://pan.baidu.com/s/1g-oOxnlQFNCwSfaJqFn7Og</a> 提取码:2t8l</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>html</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-
-
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
-    &lt;title&gt;干嘛&lt;/title&gt;
-    &lt;link rel="stylesheet" href="./css/ganma.css"&gt;
-&lt;/head&gt;
-
-`&lt;body&gt;`
-
-    &lt;header&gt;
-        今天干嘛
-    &lt;/header&gt;
-    &lt;main&gt;
-        &lt;div class="shuru"&gt;
-            &lt;input type="text" id="shuru"&gt;
-            &lt;button id="shurubtn"&gt;添加&lt;/button&gt;
-        &lt;/div&gt;
-        &lt;ul&gt;
-
-
-       `&lt;/ul&gt;`
-    `&lt;/main&gt;`
-
-    &lt;footer&gt;
-
-
-    `&lt;/footer&gt;`
-
-    &lt;script src="./js/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script src="./js/ganma.js"&gt;&lt;/script&gt;
-
-`&lt;/body&gt;`
-
-`&lt;/html&gt;`</code></pre><p>css</p>
-<pre><code>*{
-    margin: 0;
-    padding: 0;
-}
-li{
-    list-style: none;
-}
-body{
-    font-family: serif;
-}
-
-header{
-    text-align: center;
-    width: 100%;
-    padding-top: 80px;
-    background: url(../img/background.png)no-repeat;
-    font-size: 30px;
-}
-main{
-    text-align: center;
-    background: url(../img/mainbg.png) repeat-y;
-}
-.shuru{
-    padding-bottom: 50px;
-}
-#shuru{
-    padding: 5px;
-    border: none;
-    border-bottom: 2px solid #000;
-    background: rgb(242, 242, 242);
-}
-
-ul input{
-    border: none;
-    background: rgb(242, 242, 242);
-    margin-right: 10px;
-}
-footer{
-    background:url(../img/background.png);
-    background-position-y: bottom;
-    height: 100px;
-}
-
-
-button {
-  background: #eae0c2;
-  background-image: -webkit-linear-gradient(top, #eae0c2, #ccc2a6);
-  background-image: -moz-linear-gradient(top, #eae0c2, #ccc2a6);
-  background-image: -ms-linear-gradient(top, #eae0c2, #ccc2a6);
-  background-image: -o-linear-gradient(top, #eae0c2, #ccc2a6);
-  background-image: linear-gradient(to bottom, #eae0c2, #ccc2a6);
-  -webkit-border-radius: 15;
-  -moz-border-radius: 15;
-  border-radius: 15px;
-  text-shadow: 0px 1px 0px #ffffff;
-  -webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
-  -moz-box-shadow: 0px 1px 0px 0px #1c1b18;
-  box-shadow: 0px 1px 0px 0px #1c1b18;
-  font-family: Arial;
-  color: #505739;
-  font-size: 16px;
-  padding: 6px 15px 6px 15px;
-  border: solid #333029 2px;
-  text-decoration: none;
-}
-
-button:hover {
-  color: #505739;
-  background: #ccc2a6;
-  text-decoration: none;
-}
-</code></pre><p>js</p>
-<pre><code>let arr = [];
-
-
-$('#shurubtn').on('click', function () {
-    arr.push($('#shuru').val())
-    localStorage.setItem('key', arr);
-    setHtml();
-});
-
-
-setHtml();
-
-
-function setHtml() {
-    let i = localStorage.getItem('key');
-    arr = i.split(',');
-    let str = ``;
-    arr.forEach((item, key) =&gt; {
-        str += `&lt;li&gt;
-            &lt;input type="text" name="" id="" value="${item}" /&gt;
-            &lt;button index="${key}"&gt;完成&lt;/button&gt;
-        &lt;/li&gt;`
-    });
-    console.log(str)
-    $('main ul').html(str);
-    Delete()
-}
-
-
-function Delete() {
-    $('ul button').on('click', function () {
-        window.location.reload();
-        let index = this.getAttribute('index');
-        arr.splice(index, 1);
-        if (arr != '') {
-            localStorage.setItem('key', arr);
-            console.log(123)
-        } else {
-            localStorage.removeItem("key")
-        }
-        setHtml()
-
-    })
-};
-</code></pre><p>jQuery自己下一个就行</p>
-<script>
+                <h1 id="1-脚手架创建项目"><a href="#1-脚手架创建项目" class="headerlink" title="1. 脚手架创建项目"></a>1. 脚手架创建项目</h1><p>npx create-react-app myapp</p>
+<h1 id="2-react-UI库"><a href="#2-react-UI库" class="headerlink" title="2. react UI库"></a>2. react UI库</h1><p><a href="https://ant-design.gitee.io/index-cn" target="_blank" rel="noopener">ant Design</a></p>
+<pre class=" language-js"><code class="language-js">ant<span class="token operator">-</span>design<span class="token operator">-</span>pro镜像地址：
+http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>ant<span class="token operator">-</span>design<span class="token operator">-</span>pro<span class="token punctuation">.</span>gitee<span class="token punctuation">.</span>io<span class="token operator">/</span>index<span class="token operator">-</span>cn
+antd<span class="token operator">-</span>mobile镜像地址：
+https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>antd<span class="token operator">-</span>mobile<span class="token punctuation">.</span>gitee<span class="token punctuation">.</span>io<span class="token operator">/</span>index<span class="token operator">-</span>cn
+ant<span class="token operator">-</span>design镜像地址
+http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>ant<span class="token operator">-</span>design<span class="token punctuation">.</span>gitee<span class="token punctuation">.</span>io<span class="token operator">/</span>index<span class="token operator">-</span>cn</code></pre>
+<p>安装ui库</p>
+<pre class=" language-js"><code class="language-js">cnpm i antd <span class="token operator">-</span>S</code></pre>
+<p>无需做任何的配置<br>只需要在App.css文件中引入 css文件即可<br>App.scc</p>
+<pre><code>@import '~antd'/dist/antd.css</code></pre><h1 id="3-布局"><a href="#3-布局" class="headerlink" title="3. 布局"></a>3. 布局</h1><p>Layout 布局<br>src/layout/index/index.jsx<br>复制代码至本地文件,根据api引入css文件</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token string">'./style.css'</span>
+<span class="token operator">...</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Index</code></pre>
+<p>运行项目,审查元素,修改样式</p>
+<h1 id="4-构建系统的左侧菜单"><a href="#4-构建系统的左侧菜单" class="headerlink" title="4. 构建系统的左侧菜单"></a>4. 构建系统的左侧菜单</h1><p>src/router/menus.js</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> menus <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+    title<span class="token punctuation">:</span> <span class="token string">'系统首页'</span><span class="token punctuation">,</span>
+    icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    role<span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/pro'</span><span class="token punctuation">,</span>
+    title<span class="token punctuation">:</span> <span class="token string">'商品管理'</span><span class="token punctuation">,</span>
+    icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> <span class="token string">'/pro/list'</span><span class="token punctuation">,</span>
+        title<span class="token punctuation">:</span> <span class="token string">'商品列表'</span><span class="token punctuation">,</span>
+        icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/user'</span><span class="token punctuation">,</span>
+    title<span class="token punctuation">:</span> <span class="token string">'用户管理'</span><span class="token punctuation">,</span>
+    role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> <span class="token string">'/user/list'</span><span class="token punctuation">,</span>
+        title<span class="token punctuation">:</span> <span class="token string">'用户列表'</span><span class="token punctuation">,</span>
+        role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        icon<span class="token punctuation">:</span> <span class="token string">''</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> <span class="token string">'/user/admin'</span><span class="token punctuation">,</span>
+        title<span class="token punctuation">:</span> <span class="token string">'管理员列表'</span><span class="token punctuation">,</span>
+        role<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        icon<span class="token punctuation">:</span> <span class="token string">''</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/cart'</span><span class="token punctuation">,</span>
+    title<span class="token punctuation">:</span> <span class="token string">'购物车管理'</span><span class="token punctuation">,</span>
+    icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> <span class="token string">'/cart/list'</span><span class="token punctuation">,</span>
+        title<span class="token punctuation">:</span> <span class="token string">'购物车列表'</span><span class="token punctuation">,</span>
+        icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/order'</span><span class="token punctuation">,</span>
+    title<span class="token punctuation">:</span> <span class="token string">'订单管理'</span><span class="token punctuation">,</span>
+    icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> <span class="token string">'/order/list'</span><span class="token punctuation">,</span>
+        title<span class="token punctuation">:</span> <span class="token string">'订单列表'</span><span class="token punctuation">,</span>
+        icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> menus</code></pre>
+<h1 id="5-拆分组件"><a href="#5-拆分组件" class="headerlink" title="5. 拆分组件"></a>5. 拆分组件</h1><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -655,7 +579,7 @@ function Delete() {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yezhu-zhang.github.io/2020/01/11/ganma/">http://yezhu-zhang.github.io/2020/01/11/ganma/</a>
+                    <a href="http://yezhu-zhang.github.io/2020/08/10/react-shi-xian-hou-tai-guan-li-xi-tong-1/">http://yezhu-zhang.github.io/2020/08/10/react-shi-xian-hou-tai-guan-li-xi-tong-1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -878,32 +802,34 @@ function Delete() {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/08/06/webpack/">
+                <a href="/2020/08/10/react-shi-xian-hou-tai-guan-li-xi-tong-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/叶苎3.gif" class="responsive-img" alt="webpack">
+                        <img src="/medias/featureimages/叶苎1.gif" class="responsive-img" alt="react实现后台管理系统-1">
                         
-                        <span class="card-title">webpack</span>
+                        <span class="card-title">react实现后台管理系统-1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.webpackwebpack是基于node.js的一个自动任务的运行器,打包的工具webpack是为react而量身打造的一款模块化开发工具
-2.webpack的安装与版本安装
-cnpm i webpack -g 
-cnpm i web
+                            1. 脚手架创建项目npx create-react-app myapp
+2. react UI库ant Design
+ant-design-pro镜像地址：
+http://ant-design-pro.gitee.io/index-cn
+
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -912,6 +838,7 @@ cnpm i web
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -922,31 +849,27 @@ cnpm i web
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/11/zhutipeizhi/">
+                <a href="/2020/08/10/react-4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/叶苎1.gif" class="responsive-img" alt="博客主题配置">
+                        <img src="/medias/featureimages/叶苎1.gif" class="responsive-img" alt="react-4">
                         
-                        <span class="card-title">博客主题配置</span>
+                        <span class="card-title">react-4</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。
-
-特性
-简单漂亮，文章内容美观易读
-Material Design 设计
-响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现
-首页轮播文章及每天动
+                            1. react的路由vue的路由是vue-routerreact的路由是 react-router — react-router-dom
+2. 路由的使用安装
+cnpm i react-router-dom
+分别创建views/home/
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                             </span>
                         <span class="publish-author">
                             

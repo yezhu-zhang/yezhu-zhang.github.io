@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yezhu-zhang.github.io/"/>
-  <updated>2020-08-10T02:24:44.999Z</updated>
+  <updated>2020-08-10T06:19:44.203Z</updated>
   <id>http://yezhu-zhang.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>react实现后台管理系统-1</title>
+    <link href="http://yezhu-zhang.github.io/2020/08/10/react-shi-xian-hou-tai-guan-li-xi-tong-1/"/>
+    <id>http://yezhu-zhang.github.io/2020/08/10/react-shi-xian-hou-tai-guan-li-xi-tong-1/</id>
+    <published>2020-08-10T05:59:37.000Z</published>
+    <updated>2020-08-10T06:19:44.203Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-脚手架创建项目&quot;&gt;&lt;a href=&quot;#1-脚手架创建项目&quot; class=&quot;headerlink&quot; title=&quot;1. 脚手架创建项目&quot;&gt;&lt;/a&gt;1. 脚手架创建项目&lt;/h1&gt;&lt;p&gt;npx create-react-app myapp&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>react-4</title>
+    <link href="http://yezhu-zhang.github.io/2020/08/10/react-4/"/>
+    <id>http://yezhu-zhang.github.io/2020/08/10/react-4/</id>
+    <published>2020-08-10T03:02:05.000Z</published>
+    <updated>2020-08-10T05:48:30.759Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-react的路由&quot;&gt;&lt;a href=&quot;#1-react的路由&quot; class=&quot;headerlink&quot; title=&quot;1. react的路由&quot;&gt;&lt;/a&gt;1. react的路由&lt;/h1&gt;&lt;p&gt;vue的路由是vue-router&lt;br&gt;react的路由是
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>react-3</title>

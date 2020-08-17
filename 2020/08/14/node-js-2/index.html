@@ -31,8 +31,8 @@ pub">
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="超级藏剑" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="超级藏剑" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -490,7 +490,7 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
 <p>创建路由方式<br>1 大的功能模块 在routers文件夹下创建新的js文件,app.js中引入并且设置路由<br>2 某一个功能模块的功能路由 在已有的router下的文件中添加路由</p>
 <h1 id="3-静态资源目录"><a href="#3-静态资源目录" class="headerlink" title="3. 静态资源目录"></a>3. 静态资源目录</h1><p>App.js中说明了publice是静态资源目录<br>以后的页面页面模板需要的图片cssjs文件统一放在publuce下面,在页面模板内部使用/代替publice目录</p>
 <h1 id="4-中间件"><a href="#4-中间件" class="headerlink" title="4. 中间件"></a>4. 中间件</h1><p>调用中间件的关键词 use<br>第三方中间件<br>自定义中间件</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> testMiddleware <span class="token operator">=</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span>res<span class="token punctuation">,</span>next<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> testMiddleware <span class="token operator">=</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span>res<span class="token punctuation">,</span>next<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span>
     <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>

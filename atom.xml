@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yezhu-zhang.github.io/"/>
-  <updated>2020-08-17T12:36:16.797Z</updated>
+  <updated>2020-08-17T14:15:12.137Z</updated>
   <id>http://yezhu-zhang.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>node后台管理系统</title>
-    <link href="http://yezhu-zhang.github.io/2020/08/17/node-hou-tai-guan-li-xi-tong/"/>
-    <id>http://yezhu-zhang.github.io/2020/08/17/node-hou-tai-guan-li-xi-tong/</id>
-    <published>2020-08-17T12:36:16.000Z</published>
-    <updated>2020-08-17T12:36:16.797Z</updated>
+    <title>node后台管理系统-2</title>
+    <link href="http://yezhu-zhang.github.io/2020/08/17/node-hou-tai-guan-li-xi-tong-2/"/>
+    <id>http://yezhu-zhang.github.io/2020/08/17/node-hou-tai-guan-li-xi-tong-2/</id>
+    <published>2020-08-17T13:17:15.000Z</published>
+    <updated>2020-08-17T14:15:12.137Z</updated>
     
     <summary type="html">
     
@@ -29,17 +29,41 @@
       
         
         
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
+          &lt;h1 id=&quot;1-运行项目&quot;&gt;&lt;a href=&quot;#1-运行项目&quot; class=&quot;headerlink&quot; title=&quot;1. 运行项目&quot;&gt;&lt;/a&gt;1. 运行项目&lt;/h1&gt;&lt;p&gt;每次修改完代码都需要重启服务器,为了避免此种情况,安装模块&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cnpm i
         
       
     
     </summary>
     
     
+    
+      <category term="node" scheme="http://yezhu-zhang.github.io/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node后台管理系统-1</title>
+    <link href="http://yezhu-zhang.github.io/2020/08/17/node-hou-tai-guan-li-xi-tong/"/>
+    <id>http://yezhu-zhang.github.io/2020/08/17/node-hou-tai-guan-li-xi-tong/</id>
+    <published>2020-08-17T12:36:16.000Z</published>
+    <updated>2020-08-17T13:50:57.344Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-项目&quot;&gt;&lt;a href=&quot;#1-项目&quot; class=&quot;headerlink&quot; title=&quot;1.项目&quot;&gt;&lt;/a&gt;1.项目&lt;/h1&gt;&lt;h2 id=&quot;1-1-安装模块&quot;&gt;&lt;a href=&quot;#1-1-安装模块&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="node" scheme="http://yezhu-zhang.github.io/tags/node/"/>
     
   </entry>
   

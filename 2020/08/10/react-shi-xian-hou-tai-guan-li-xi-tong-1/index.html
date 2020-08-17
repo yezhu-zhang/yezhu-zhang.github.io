@@ -5,11 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="react实现后台管理系统-1, 超级藏剑">
-    <meta name="description" content="1. 脚手架创建项目npx create-react-app myapp
-2. react UI库ant Design
-ant-design-pro镜像地址：
-http://ant-design-pro.gitee.io/index-cn
-">
+    <meta name="description" content="
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -451,96 +450,7 @@ http://ant-design-pro.gitee.io/index-cn
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1-脚手架创建项目"><a href="#1-脚手架创建项目" class="headerlink" title="1. 脚手架创建项目"></a>1. 脚手架创建项目</h1><p>npx create-react-app myapp</p>
-<h1 id="2-react-UI库"><a href="#2-react-UI库" class="headerlink" title="2. react UI库"></a>2. react UI库</h1><p><a href="https://ant-design.gitee.io/index-cn" target="_blank" rel="noopener">ant Design</a></p>
-<pre class=" language-js"><code class="language-js">ant<span class="token operator">-</span>design<span class="token operator">-</span>pro镜像地址：
-http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>ant<span class="token operator">-</span>design<span class="token operator">-</span>pro<span class="token punctuation">.</span>gitee<span class="token punctuation">.</span>io<span class="token operator">/</span>index<span class="token operator">-</span>cn
-antd<span class="token operator">-</span>mobile镜像地址：
-https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>antd<span class="token operator">-</span>mobile<span class="token punctuation">.</span>gitee<span class="token punctuation">.</span>io<span class="token operator">/</span>index<span class="token operator">-</span>cn
-ant<span class="token operator">-</span>design镜像地址
-http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>ant<span class="token operator">-</span>design<span class="token punctuation">.</span>gitee<span class="token punctuation">.</span>io<span class="token operator">/</span>index<span class="token operator">-</span>cn</code></pre>
-<p>安装ui库</p>
-<pre class=" language-js"><code class="language-js">cnpm i antd <span class="token operator">-</span>S</code></pre>
-<p>无需做任何的配置<br>只需要在App.css文件中引入 css文件即可<br>App.scc</p>
-<pre><code>@import '~antd'/dist/antd.css</code></pre><h1 id="3-布局"><a href="#3-布局" class="headerlink" title="3. 布局"></a>3. 布局</h1><p>Layout 布局<br>src/layout/index/index.jsx<br>复制代码至本地文件,根据api引入css文件</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
-<span class="token keyword">import</span> <span class="token string">'./style.css'</span>
-<span class="token operator">...</span>
-<span class="token keyword">export</span> <span class="token keyword">default</span> Index</code></pre>
-<p>运行项目,审查元素,修改样式</p>
-<h1 id="4-构建系统的左侧菜单"><a href="#4-构建系统的左侧菜单" class="headerlink" title="4. 构建系统的左侧菜单"></a>4. 构建系统的左侧菜单</h1><p>src/router/menus.js</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> menus <span class="token operator">=</span> <span class="token punctuation">[</span>
-  <span class="token punctuation">{</span>
-    path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
-    title<span class="token punctuation">:</span> <span class="token string">'系统首页'</span><span class="token punctuation">,</span>
-    icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
-    role<span class="token punctuation">:</span> <span class="token number">1</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span>
-    path<span class="token punctuation">:</span> <span class="token string">'/pro'</span><span class="token punctuation">,</span>
-    title<span class="token punctuation">:</span> <span class="token string">'商品管理'</span><span class="token punctuation">,</span>
-    icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
-    role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        path<span class="token punctuation">:</span> <span class="token string">'/pro/list'</span><span class="token punctuation">,</span>
-        title<span class="token punctuation">:</span> <span class="token string">'商品列表'</span><span class="token punctuation">,</span>
-        icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
-        role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span>
-    path<span class="token punctuation">:</span> <span class="token string">'/user'</span><span class="token punctuation">,</span>
-    title<span class="token punctuation">:</span> <span class="token string">'用户管理'</span><span class="token punctuation">,</span>
-    role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
-    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        path<span class="token punctuation">:</span> <span class="token string">'/user/list'</span><span class="token punctuation">,</span>
-        title<span class="token punctuation">:</span> <span class="token string">'用户列表'</span><span class="token punctuation">,</span>
-        role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        icon<span class="token punctuation">:</span> <span class="token string">''</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        path<span class="token punctuation">:</span> <span class="token string">'/user/admin'</span><span class="token punctuation">,</span>
-        title<span class="token punctuation">:</span> <span class="token string">'管理员列表'</span><span class="token punctuation">,</span>
-        role<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        icon<span class="token punctuation">:</span> <span class="token string">''</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span>
-    path<span class="token punctuation">:</span> <span class="token string">'/cart'</span><span class="token punctuation">,</span>
-    title<span class="token punctuation">:</span> <span class="token string">'购物车管理'</span><span class="token punctuation">,</span>
-    icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
-    role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        path<span class="token punctuation">:</span> <span class="token string">'/cart/list'</span><span class="token punctuation">,</span>
-        title<span class="token punctuation">:</span> <span class="token string">'购物车列表'</span><span class="token punctuation">,</span>
-        icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
-        role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span>
-    path<span class="token punctuation">:</span> <span class="token string">'/order'</span><span class="token punctuation">,</span>
-    title<span class="token punctuation">:</span> <span class="token string">'订单管理'</span><span class="token punctuation">,</span>
-    icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
-    role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        path<span class="token punctuation">:</span> <span class="token string">'/order/list'</span><span class="token punctuation">,</span>
-        title<span class="token punctuation">:</span> <span class="token string">'订单列表'</span><span class="token punctuation">,</span>
-        icon<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
-        role<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">]</span>
-<span class="token keyword">export</span> <span class="token keyword">default</span> menus</code></pre>
-<h1 id="5-拆分组件"><a href="#5-拆分组件" class="headerlink" title="5. 拆分组件"></a>5. 拆分组件</h1><script>
+                <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }

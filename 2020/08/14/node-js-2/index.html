@@ -4,12 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="苏不同画的画, 超级藏剑">
-    <meta name="description" content="
-
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { retur">
+    <meta name="keywords" content="node.js-2, 超级藏剑">
+    <meta name="description" content="1.项目目录了解创建项目运行项目
+ cnpm run start (或者是yarn start)通过
+http://localhost:3000访问bin
+    www 服务器的端口号设置以及服务器的创建
+node_modules
+pub">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>苏不同画的画 | 超级藏剑</title>
+    <title>node.js-2 | 超级藏剑</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,7 +292,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">苏不同画的画</h1>
+                    <h1 class="description center-align post-title">node.js-2</h1>
                 </div>
             </div>
         </div>
@@ -408,8 +409,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                <span class="chip bg-color">日常</span>
+                            <a href="/tags/node/">
+                                <span class="chip bg-color">node</span>
                             </a>
                         
                     </div>
@@ -424,7 +425,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-08-14
                 </div>
                 
 
@@ -435,7 +436,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -451,8 +452,56 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://s1.ax1x.com/2020/08/10/aHoImV.jpg" alt=""></p>
-<script>
+                <h1 id="1-项目目录了解"><a href="#1-项目目录了解" class="headerlink" title="1.项目目录了解"></a>1.项目目录了解</h1><p>创建项目<br>运行项目</p>
+<pre><code> cnpm run start (或者是yarn start)</code></pre><p>通过</p>
+<pre><code>http://localhost:3000访问</code></pre><pre><code>bin
+    www 服务器的端口号设置以及服务器的创建
+node_modules
+public 静态资源的目录
+    images
+    JavaScript
+    stylesheets
+router 路由
+view 页面模板
+app.js 项目的基础配置(cookie,静态资源目录,路由)
+package.json 项目依赖的描述文件</code></pre><h1 id="2-路由"><a href="#2-路由" class="headerlink" title="2.路由"></a>2.路由</h1><p>对应项目目录下的router文件夹内部的文件</p>
+<p>index.js 对应 ./<br>user.js 对应./user/js</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> router <span class="token operator">=</span> express<span class="token punctuation">.</span><span class="token function">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* GET home page. */</span>
+router<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'index'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    activeindex<span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> router<span class="token punctuation">;</span></code></pre>
+<p>render 渲染了一个页面index,自动省略后缀名</p>
+<p>为什么渲染页面时只需要填写view文件夹下的文件名称即可<br>app.js文件设置了views文件夹为页面模板文件夹<br>ejs为省略的后缀名</p>
+<pre class=" language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span><span class="token string">'views'</span><span class="token punctuation">,</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'views'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span><span class="token string">'view engine'</span><span class="token punctuation">,</span> <span class="token string">'ejs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre><code>为什么输入localhost:3000/ 和 localhost:3000/user时能看到想看到的信息,输入别的不行</code></pre><p>因为没有设置这个路由</p>
+<p>路由在app.js中设置<br>引入路由文件</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> indexRouter <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./routes/index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> usersRouter <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./routes/users'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>设置路由</p>
+<pre class=" language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> indexRouter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/users'</span><span class="token punctuation">,</span> usersRouter<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>创建路由方式<br>1 大的功能模块 在routers文件夹下创建新的js文件,app.js中引入并且设置路由<br>2 某一个功能模块的功能路由 在已有的router下的文件中添加路由</p>
+<h1 id="3-静态资源目录"><a href="#3-静态资源目录" class="headerlink" title="3. 静态资源目录"></a>3. 静态资源目录</h1><p>App.js中说明了publice是静态资源目录<br>以后的页面页面模板需要的图片cssjs文件统一放在publuce下面,在页面模板内部使用/代替publice目录</p>
+<h1 id="4-中间件"><a href="#4-中间件" class="headerlink" title="4. 中间件"></a>4. 中间件</h1><p>调用中间件的关键词 use<br>第三方中间件<br>自定义中间件</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> testMiddleware <span class="token operator">=</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span>res<span class="token punctuation">,</span>next<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span>
+    <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>testMiddleeare<span class="token punctuation">)</span></code></pre>
+<h1 id="5-ejs模板语法"><a href="#5-ejs模板语法" class="headerlink" title="5. ejs模板语法"></a>5. ejs模板语法</h1><pre><code>&lt;% %&gt;
+&lt;%= val %&gt;  转义输出
+&lt;%- val %&gt;  解析输出
+&lt;%- include('./*.ejs) %&gt; 引入另一个ejs页面
+
+&lt;% if() { %&gt; 条件判断
+&lt;% } %&gt;</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -495,7 +544,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yezhu-zhang.github.io/2020/08/10/su-bu-tong-hua-de-hua/">http://yezhu-zhang.github.io/2020/08/10/su-bu-tong-hua-de-hua/</a>
+                    <a href="http://yezhu-zhang.github.io/2020/08/14/node-js-2/">http://yezhu-zhang.github.io/2020/08/14/node-js-2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -533,8 +582,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                    <span class="chip bg-color">日常</span>
+                                <a href="/tags/node/">
+                                    <span class="chip bg-color">node</span>
                                 </a>
                             
                         </div>
@@ -726,29 +775,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/11/vue-1/">
+                <a href="/2020/08/14/mian-shi-ti-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/叶苎1.gif" class="responsive-img" alt="vue-1">
+                        <img src="/medias/featureimages/叶苎3.gif" class="responsive-img" alt="面试题-1">
                         
-                        <span class="card-title">vue-1</span>
+                        <span class="card-title">面试题-1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. el选项script标签引入vue.js
-&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-  &lt;meta charset="UTF-8">
-  &lt;meta name="vi
+                            1. doctype的作用?严格模式和混杂模式的区分,以及如何触发这两种模式?声明位于文档中的最前面,处于标签之前,告知浏览器的解析器,用什么文档类型规范来解析这个文档.Doctype不存在或者格式不正确会导致文档以混杂模式呈现严格模式就是
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-14
                         </span>
                         <span class="publish-author">
                             
@@ -761,8 +805,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vue/">
-                        <span class="chip bg-color">Vue</span>
+                    <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">面试题</span>
                     </a>
                     
                 </div>
@@ -776,27 +820,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/10/react-shi-xian-hou-tai-guan-li-xi-tong-1/">
+                <a href="/2020/08/13/node-js-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/叶苎1.gif" class="responsive-img" alt="react实现后台管理系统-1">
+                        <img src="/medias/featureimages/叶苎3.gif" class="responsive-img" alt="node.js-1">
                         
-                        <span class="card-title">react实现后台管理系统-1</span>
+                        <span class="card-title">node.js-1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            1.node 介绍node由c++语言编写编写node程序使用的是js中文网下载node稳定版本版本号的构成 a.b.ca代表主版本的修改b代表小版本号升级c代表bug的修复奇数版本被认为是不稳定版本,推荐使用偶数版本nodejs给予com
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-13
                             </span>
                         <span class="publish-author">
                             
@@ -809,8 +850,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/react/">
-                        <span class="chip bg-color">react</span>
+                    <a href="/tags/node/">
+                        <span class="chip bg-color">node</span>
                     </a>
                     
                 </div>

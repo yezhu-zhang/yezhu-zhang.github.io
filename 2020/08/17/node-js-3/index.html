@@ -4,12 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="苏不同画的画, 超级藏剑">
-    <meta name="description" content="
+    <meta name="keywords" content="node.js-3, 超级藏剑">
+    <meta name="description" content="1.添加const Product = require(&#39;./col/Product&#39;)
 
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { retur">
+// db.test.insert({}) []
+
+Product.insertMany({
+  proid: &#39;pro_0000001&#39;,
+  p">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>苏不同画的画 | 超级藏剑</title>
+    <title>node.js-3 | 超级藏剑</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/叶苎1.gif')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/叶苎3.gif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">苏不同画的画</h1>
+                    <h1 class="description center-align post-title">node.js-3</h1>
                 </div>
             </div>
         </div>
@@ -408,8 +410,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                <span class="chip bg-color">日常</span>
+                            <a href="/tags/node/">
+                                <span class="chip bg-color">node</span>
                             </a>
                         
                     </div>
@@ -424,7 +426,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-08-17
                 </div>
                 
 
@@ -435,7 +437,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -451,7 +453,154 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://s1.ax1x.com/2020/08/10/aHoImV.jpg" alt=""></p>
+                <h1 id="1-添加"><a href="#1-添加" class="headerlink" title="1.添加"></a>1.添加</h1><pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> Product <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./col/Product'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// db.test.insert({}) []</span>
+
+Product<span class="token punctuation">.</span><span class="token function">insertMany</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  proid<span class="token punctuation">:</span> <span class="token string">'pro_0000001'</span><span class="token punctuation">,</span>
+  proname<span class="token punctuation">:</span> <span class="token string">'九号九号滑板车'</span><span class="token punctuation">,</span>
+  price<span class="token punctuation">:</span> <span class="token number">1699</span><span class="token punctuation">,</span>
+  proimg<span class="token punctuation">:</span> <span class="token string">'https://img11.360buyimg.com/n1/s450x450_jfs/t1/108695/27/14181/92630/5ea56f3aEfa2f5466/cc5c7c35109824cf.jpg'</span><span class="token punctuation">,</span>
+  desc<span class="token punctuation">:</span> <span class="token string">'inebot 九号电动滑板车(标准版) 成人儿童便携折叠电动车体感车'</span><span class="token punctuation">,</span>
+  stock<span class="token punctuation">:</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+  sales<span class="token punctuation">:</span> <span class="token number">52000</span><span class="token punctuation">,</span>
+  rating<span class="token punctuation">:</span> <span class="token number">4.8</span><span class="token punctuation">,</span>
+  category<span class="token punctuation">:</span> <span class="token string">'体感车'</span><span class="token punctuation">,</span>
+  brand<span class="token punctuation">:</span> <span class="token string">'九号(Ninebot)'</span><span class="token punctuation">,</span>
+  discount<span class="token punctuation">:</span> <span class="token number">9</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'insert success'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<h1 id="2-删除"><a href="#2-删除" class="headerlink" title="2.删除"></a>2.删除</h1><pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> Product <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./col/Product'</span><span class="token punctuation">)</span>
+Product<span class="token punctuation">.</span><span class="token function">deleteMany</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'delete success'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<h1 id="3-修改"><a href="#3-修改" class="headerlink" title="3.修改"></a>3.修改</h1><pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> Product <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./col/Product'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// db.test.updateOne({}, { $set/$inc: {}})</span>
+
+Product<span class="token punctuation">.</span><span class="token function">updateOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span> proid<span class="token punctuation">:</span> <span class="token string">'pro_0000001'</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> $inc<span class="token punctuation">:</span> <span class="token punctuation">{</span> sales<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> stock<span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'update success'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>#4. 查询</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 拿到数据库集合</span>
+<span class="token keyword">const</span> Product <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./col/Product'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// Product.find({}, { _id: 0}, (err, data) => {</span>
+<span class="token comment" spellcheck="true">//   if (err) {</span>
+<span class="token comment" spellcheck="true">//     console.log(err)</span>
+<span class="token comment" spellcheck="true">//   } else {</span>
+<span class="token comment" spellcheck="true">//     console.log(data)</span>
+<span class="token comment" spellcheck="true">//   }</span>
+<span class="token comment" spellcheck="true">// })</span>
+
+<span class="token comment" spellcheck="true">// Product.find({}, {}).exec((err, data) => {</span>
+<span class="token comment" spellcheck="true">//   if (err) {</span>
+<span class="token comment" spellcheck="true">//     console.log(err)</span>
+<span class="token comment" spellcheck="true">//   } else {</span>
+<span class="token comment" spellcheck="true">//     console.log(data)</span>
+<span class="token comment" spellcheck="true">//   } </span>
+<span class="token comment" spellcheck="true">// })</span>
+
+<span class="token comment" spellcheck="true">// Product.count((err, num) => {</span>
+<span class="token comment" spellcheck="true">//   if (err) throw err</span>
+<span class="token comment" spellcheck="true">//   console.log(num)</span>
+<span class="token comment" spellcheck="true">// })</span>
+
+<span class="token comment" spellcheck="true">// Product.count().exec((err, num) => {</span>
+<span class="token comment" spellcheck="true">//   if (err) throw err</span>
+<span class="token comment" spellcheck="true">//   console.log(num)</span>
+<span class="token comment" spellcheck="true">// })</span>
+
+<span class="token comment" spellcheck="true">// Product.find({}, {}).limit(1).exec((err, data) => {</span>
+<span class="token comment" spellcheck="true">//   if (err) throw err</span>
+<span class="token comment" spellcheck="true">//   console.log(data)</span>
+<span class="token comment" spellcheck="true">// })</span>
+
+Product<span class="token punctuation">.</span><span class="token function">distinct</span><span class="token punctuation">(</span><span class="token string">'category'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> 
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<h1 id="5-封装增删改查"><a href="#5-封装增删改查" class="headerlink" title="5.封装增删改查"></a>5.封装增删改查</h1><p>index.js</p>
+<pre class=" language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 增</span>
+  insert <span class="token punctuation">(</span>colName<span class="token punctuation">,</span> insertData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// return new Promise 包裹异步的操作，成功调用resolve即可</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      colName<span class="token punctuation">.</span><span class="token function">insertMany</span><span class="token punctuation">(</span>insertData<span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// 删</span>
+  <span class="token keyword">delete</span> <span class="token punctuation">(</span>colName<span class="token punctuation">,</span> deleteData<span class="token punctuation">,</span> deleteNum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 如果deleteNum的值为1，删除多条</span>
+    <span class="token keyword">let</span> deleteType <span class="token operator">=</span> deleteNum <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token string">'deleteMany'</span> <span class="token punctuation">:</span> <span class="token string">'deleteOne'</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      colName<span class="token punctuation">[</span>deleteType<span class="token punctuation">]</span><span class="token punctuation">(</span>deleteData<span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// 改</span>
+  update <span class="token punctuation">(</span>colName<span class="token punctuation">,</span> whereData<span class="token punctuation">,</span> updateData<span class="token punctuation">,</span> updateNum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> updateType <span class="token operator">=</span> updateNum <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token string">'updateMany'</span> <span class="token punctuation">:</span> <span class="token string">'updateOne'</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      colName<span class="token punctuation">[</span>updateType<span class="token punctuation">]</span><span class="token punctuation">(</span>whereData<span class="token punctuation">,</span> updateData<span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// 查</span>
+  find <span class="token punctuation">(</span>colName<span class="token punctuation">,</span> whereData<span class="token punctuation">,</span> showData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// return new Promise((resolve, reject) => {</span>
+    <span class="token comment" spellcheck="true">//   colName.find(whereData, showData, (err, data) => {</span>
+    <span class="token comment" spellcheck="true">//     if (err) throw err</span>
+    <span class="token comment" spellcheck="true">//     resolve(data)</span>
+    <span class="token comment" spellcheck="true">//   })</span>
+    <span class="token comment" spellcheck="true">// })</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      colName<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>whereData<span class="token punctuation">,</span> showData<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+        <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// 计数</span>
+  count <span class="token punctuation">(</span>colName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      colName<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+        <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// 查找某一字段的分类</span>
+  distinct <span class="token punctuation">(</span>colName<span class="token punctuation">,</span> type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      colName<span class="token punctuation">.</span><span class="token function">distinct</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+        <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// 分页</span>
+  paging <span class="token punctuation">(</span>colName<span class="token punctuation">,</span> whereData<span class="token punctuation">,</span> showData<span class="token punctuation">,</span> limit<span class="token punctuation">,</span> count<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// count 的值从0开始</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      colName<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>whereData<span class="token punctuation">,</span> showData<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">limit</span><span class="token punctuation">(</span>limit<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">skip</span><span class="token punctuation">(</span>count <span class="token operator">*</span> limit<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+        <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -495,7 +644,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yezhu-zhang.github.io/2020/08/10/su-bu-tong-hua-de-hua/">http://yezhu-zhang.github.io/2020/08/10/su-bu-tong-hua-de-hua/</a>
+                    <a href="http://yezhu-zhang.github.io/2020/08/17/node-js-3/">http://yezhu-zhang.github.io/2020/08/17/node-js-3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -533,8 +682,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                    <span class="chip bg-color">日常</span>
+                                <a href="/tags/node/">
+                                    <span class="chip bg-color">node</span>
                                 </a>
                             
                         </div>
@@ -726,29 +875,27 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/11/vue-1/">
+                <a href="/2020/08/17/node-hou-tai-guan-li-xi-tong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/叶苎1.gif" class="responsive-img" alt="vue-1">
+                        <img src="/medias/featureimages/叶苎3.gif" class="responsive-img" alt="node后台管理系统">
                         
-                        <span class="card-title">vue-1</span>
+                        <span class="card-title">node后台管理系统</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. el选项script标签引入vue.js
-&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-  &lt;meta charset="UTF-8">
-  &lt;meta name="vi
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
                         </span>
                         <span class="publish-author">
                             
@@ -757,14 +904,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Vue/">
-                        <span class="chip bg-color">Vue</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -776,13 +915,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/10/react-shi-xian-hou-tai-guan-li-xi-tong-1/">
+                <a href="/2020/08/17/dva/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/叶苎1.gif" class="responsive-img" alt="react实现后台管理系统-1">
+                        <img src="/medias/featureimages/叶苎3.gif" class="responsive-img" alt="dva">
                         
-                        <span class="card-title">react实现后台管理系统-1</span>
+                        <span class="card-title">dva</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -796,7 +935,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
                             </span>
                         <span class="publish-author">
                             
@@ -805,14 +944,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/react/">
-                        <span class="chip bg-color">react</span>
-                    </a>
-                    
                 </div>
                 
             </div>

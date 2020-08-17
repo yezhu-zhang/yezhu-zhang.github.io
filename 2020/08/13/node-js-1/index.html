@@ -4,12 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="苏不同画的画, 超级藏剑">
-    <meta name="description" content="
-
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { retur">
+    <meta name="keywords" content="node.js-1, 超级藏剑">
+    <meta name="description" content="1.node 介绍node由c++语言编写编写node程序使用的是js中文网下载node稳定版本版本号的构成 a.b.ca代表主版本的修改b代表小版本号升级c代表bug的修复奇数版本被认为是不稳定版本,推荐使用偶数版本nodejs给予com">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>苏不同画的画 | 超级藏剑</title>
+    <title>node.js-1 | 超级藏剑</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +282,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/叶苎1.gif')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/叶苎3.gif')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">苏不同画的画</h1>
+                    <h1 class="description center-align post-title">node.js-1</h1>
                 </div>
             </div>
         </div>
@@ -408,8 +404,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                <span class="chip bg-color">日常</span>
+                            <a href="/tags/node/">
+                                <span class="chip bg-color">node</span>
                             </a>
                         
                     </div>
@@ -424,7 +420,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-08-13
                 </div>
                 
 
@@ -435,7 +431,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 				
@@ -451,7 +447,97 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://s1.ax1x.com/2020/08/10/aHoImV.jpg" alt=""></p>
+                <h1 id="1-node-介绍"><a href="#1-node-介绍" class="headerlink" title="1.node 介绍"></a>1.node 介绍</h1><p>node由c++语言编写<br>编写node程序使用的是js<br><a href="nodejs.cn">中文网</a><br>下载node稳定版本<br>版本号的构成 a.b.c<br>a代表主版本的修改<br>b代表小版本号升级<br>c代表bug的修复<br>奇数版本被认为是不稳定版本,推荐使用偶数版本<br>nodejs给予common.js规范 common.js有是模块化开发的规范<br>自定义模块<br>导出模块</p>
+<pre class=" language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+<p>导入模块</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> md  <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span></code></pre>
+<p>node的模块类型<br>核心模块 — 安装nodejs自带的模块<br>第三方模块 — 需要安装的模块 npm i/cnpm i/yarn<br>自定义模块 — 模块法开发</p>
+<h1 id="2-npm包管理器"><a href="#2-npm包管理器" class="headerlink" title="2. npm包管理器"></a>2. npm包管理器</h1><p>世界上最大的包管理器<br>例如下载 jquery 1.11.0</p>
+<pre><code>npm i jquery@1.11.0</code></pre><p>npm速度很慢,推荐使用淘宝镜像cnpm<br>如何使用cnpm<br><a href="https://npm.taobao.org" target="_blank" rel="noopener">NPM</a></p>
+<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></pre><p>以后可以使用cnpm代替npm,除非特殊情况<br>临时安装模块 md ,且为最新版本</p>
+<pre><code>npm i md</code></pre><p>临时安装指定版本的模块</p>
+<pre><code>npm i md@2
+npm i md@2.1</code></pre><p>临时安装指定版本的模块</p>
+<pre><code>npm i md@2.1.1</code></pre><p>安装项目依赖.会在package.json文件中描述</p>
+<pre><code>npm i md --save</code></pre><p>安装开发依赖</p>
+<pre><code>npm i md --save-dev</code></pre><p>全局安装模块–在任意一个目录下均可以访问</p>
+<pre><code>npm i md -global</code></pre><p>简写形式</p>
+<pre><code>--save = -S
+--save-dev = -D
+-glabal = -g</code></pre><p>yarn<br>也是一个包管理器</p>
+<pre><code>yarn add md</code></pre><h1 id="3-nodejs服务器"><a href="#3-nodejs服务器" class="headerlink" title="3. nodejs服务器"></a>3. nodejs服务器</h1><h2 id="3-1-简单的服务器"><a href="#3-1-简单的服务器" class="headerlink" title="3.1 简单的服务器"></a>3.1 简单的服务器</h2><p>自定义一个node服务器</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> server <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>res<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// req请求,res相应</span>
+  res<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'hello world'</span><span class="token punctuation">)</span>
+  res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'服务器已经运行http://localhost:3000'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>发送了两个请求,一个是请求头,一个请求的图标<br>验证</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> server <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>res<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'hello world'</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+  res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'服务器已经运行http://localhost:3000'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>终端输出</p>
+<pre><code>/
+/favicon.ico</code></pre><p>/favicon.ico就是请求图标<br>添加if判断过滤请求图标</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>req<span class="token punctuation">.</span>url <span class="token operator">!==</span> <span class="token string">'/favicon.ico'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>输出中文乱码解决方法</p>
+<pre class=" language-js"><code class="language-js">res<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"content-type"</span><span class="token punctuation">:</span> <span class="token string">"text/html;charset=utf-8"</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>text/html表示解析标签,可以解析</p><h1>hello</h1><p></p>
+<pre class=" language-js"><code class="language-js">res<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"content-type"</span><span class="token punctuation">:</span> <span class="token string">"text/plain;charset=utf-8"</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>text/plain表示转义输出,不解析标签</p>
+<h2 id="3-2-获取参数的信息"><a href="#3-2-获取参数的信息" class="headerlink" title="3.2 获取参数的信息"></a>3.2 获取参数的信息</h2><p>接收参数<br>引入url模块<br>使用url.parse方法.有两个参数.第一个是请求url.第二个是true,把url转成对象.通过query才能读取到参数,query就是参数信息</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> server <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>req<span class="token punctuation">.</span>url <span class="token operator">!==</span> <span class="token string">'/favicon.ico'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 过滤图标的请求 （超市-购物袋）</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>url<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// /abcd?username=wudaxun&amp;password=123456</span>
+    <span class="token keyword">const</span> obj <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>url<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">.</span>query
+    res<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// "content-type": "text/html;charset=utf-8" // 解析输出</span>
+      <span class="token string">"content-type"</span><span class="token punctuation">:</span> <span class="token string">"text/plain;charset=utf-8"</span> <span class="token comment" spellcheck="true">// 转义输出</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'您的用户名为：'</span><span class="token operator">+</span> obj<span class="token punctuation">.</span>username<span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'您的密码为：'</span><span class="token operator">+</span> obj<span class="token punctuation">.</span>password<span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'your server is running at http://localhost:3000'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<h2 id="3-3-querystring"><a href="#3-3-querystring" class="headerlink" title="3.3 querystring"></a>3.3 querystring</h2><p>参数类型的字符串处理模板</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> qs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'querystring'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 参数类型的字符串的处理模块</span>
+
+<span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">'username=jim&amp;password=123456'</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>qs<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>url.parse(req.url, true).query的第二个参数其实就是querystring.parse()的封装写法</p>
+<h1 id="4-服务器"><a href="#4-服务器" class="headerlink" title="4. 服务器"></a>4. 服务器</h1><h2 id="4-1-什么是服务器"><a href="#4-1-什么是服务器" class="headerlink" title="4.1 什么是服务器"></a>4.1 什么是服务器</h2><p>提供计算服务的设备,应具备承担服务并且保障服务的能力<br>分为文件服务器,数据库服务器,应用程序服务器,web服务器等</p>
+<h1 id="5-express"><a href="#5-express" class="headerlink" title="5. express"></a>5. express</h1><h2 id="5-1-express搭建服务器"><a href="#5-1-express搭建服务器" class="headerlink" title="5.1 express搭建服务器"></a>5.1 express搭建服务器</h2><p>基于node.js的模块<br>安装</p>
+<pre><code>cnpm i express -S</code></pre><pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 如果是get请求 通过req.query获取参数</span>
+  <span class="token comment" spellcheck="true">// 如果是post请求 通过req.body获取参数</span>
+  res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'hello express server, 您好，express'</span> <span class="token operator">+</span> req<span class="token punctuation">.</span>query<span class="token punctuation">.</span>username <span class="token operator">+</span> <span class="token string">'---'</span> <span class="token operator">+</span> req<span class="token punctuation">.</span>query<span class="token punctuation">.</span>password<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span></code></pre>
+<h2 id="5-2-express项目生成器"><a href="#5-2-express项目生成器" class="headerlink" title="5.2 express项目生成器"></a>5.2 express项目生成器</h2><p>脚手架<br>方法一<br>安装</p>
+<pre><code>cnpm i express-generator -S</code></pre><p>创建项目</p>
+<pre><code>express adminapp --view=ejs</code></pre><p>–view=ejs表明页面模板的后缀名叫ejs<br>方式二<br>创建项目</p>
+<pre><code>npx express myadminapp --view=ejs</code></pre><p>方式二无需安装项目生成器<br>npx是在node.js在8.2.0版本后自带的项目生成器</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -495,7 +581,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yezhu-zhang.github.io/2020/08/10/su-bu-tong-hua-de-hua/">http://yezhu-zhang.github.io/2020/08/10/su-bu-tong-hua-de-hua/</a>
+                    <a href="http://yezhu-zhang.github.io/2020/08/13/node-js-1/">http://yezhu-zhang.github.io/2020/08/13/node-js-1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -533,8 +619,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                    <span class="chip bg-color">日常</span>
+                                <a href="/tags/node/">
+                                    <span class="chip bg-color">node</span>
                                 </a>
                             
                         </div>
@@ -726,6 +812,56 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2020/08/14/node-js-2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/叶苎1.gif" class="responsive-img" alt="node.js-2">
+                        
+                        <span class="card-title">node.js-2</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1.项目目录了解创建项目运行项目
+ cnpm run start (或者是yarn start)通过
+http://localhost:3000访问bin
+    www 服务器的端口号设置以及服务器的创建
+node_modules
+pub
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            zhishui
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/node/">
+                        <span class="chip bg-color">node</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/08/11/vue-1/">
                     <div class="card-image">
                         
@@ -747,9 +883,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -763,54 +899,6 @@
                     
                     <a href="/tags/Vue/">
                         <span class="chip bg-color">Vue</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/08/10/react-shi-xian-hou-tai-guan-li-xi-tong-1/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/叶苎1.gif" class="responsive-img" alt="react实现后台管理系统-1">
-                        
-                        <span class="card-title">react实现后台管理系统-1</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            zhishui
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/react/">
-                        <span class="chip bg-color">react</span>
                     </a>
                     
                 </div>
